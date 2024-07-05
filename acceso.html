@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso a Aniversario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amifer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assent/css/styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Amifer', cursive;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para centrar correctamente el input de tipo date */
+        input[type="date"] {
+            width: calc(100% - 22px); /* Ajustar el ancho para que no se desborde */
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center; /* Centrar el texto dentro del input */
+            box-sizing: border-box; /* Asegurar que el padding se incluya en el ancho total */
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #error-msg {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Ingrese la fecha de aniversario:</h1>
+        <form id="login-form" onsubmit="return validateForm()">
+            <input type="date" id="fecha" required>
+            <input type="submit" value="Acceder">
+        </form>
+        <p id="error-msg"></p>
+    </div>
+
+    <script>
+        function validateForm() {
+            var fechaIngresada = document.getElementById("fecha").value;
+            var fechaPermitida = "2023-07-09"; // Fecha de aniversario permitida en formato YYYY-MM-DD
+            
+            if (fechaIngresada === fechaPermitida) {
+                window.location.href = "index.html";
+                return false;
+            } else {
+                document.getElementById("error-msg").innerText = "Fecha incorrecta. Intente nuevamente.";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
