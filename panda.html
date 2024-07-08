@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aniversario</title>
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./assent/css/panda.css" />
+  <style>
+    .error-message {
+      color: red;
+      margin-top: 5px;
+      text-align: center; /* Centra el texto */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form id="loginForm" action="index.html" method="get" onsubmit="return validatePassword()">
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" placeholder="Adivina la contraseña... " />
+      <button type="submit">Login</button>
+      <p class="error-message" id="errorMessage"></p>
+    </form>
+    <div class="ear-l"></div>
+    <div class="ear-r"></div>
+    <div class="panda-face">
+      <div class="blush-l"></div>
+      <div class="blush-r"></div>
+      <div class="eye-l">
+        <div class="eyeball-l"></div>
+      </div>
+      <div class="eye-r">
+        <div class="eyeball-r"></div>
+      </div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    <div class="hand-l"></div>
+    <div class="hand-r"></div>
+    <div class="paw-l"></div>
+    <div class="paw-r"></div>
+  </div>
+  <!-- Script -->
+  <script src="./assent/js/panda.js"></script>
+  
+</body>
+</html>
